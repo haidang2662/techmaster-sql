@@ -1,0 +1,38 @@
+create table tbl_sinhvien (
+id int,
+ten varchar(25),
+tuoi int ,
+gioiTinh varchar(25),
+maLop varchar(25)
+);
+
+create table tbl_giaovien (
+id int,
+ten varchar(25),
+tuoi int ,
+gioiTinh varchar(25),
+soNamKN varchar(25)
+);
+
+INSERT INTO tbl_sinhvien (id,ten,tuoi,gioiTinh,maLop)
+values (1,"thanh",20,"nam","java"),
+(2,"hằng",21,"nữ","java"),
+(3,"ngọc",22,"nữ","java"),
+(4,"Thắng",20,"nam","java"),
+(5,"Công",22,"nam","java");
+
+INSERT INTO tbl_giaovien (id,ten,tuoi,gioiTinh,sonamKN)
+values (1,"thanh",28,"nam",2),
+(2,"hằng",29,"nữ",3),
+(3,"ngọc",27,"nữ",4),
+(4,"Thắng",29,"nam",5),
+(5,"Công",29,"nam",6);
+
+set SQL_SAFE_UPDATES = 0;
+
+update tbl_sinhvien
+set ten = "huyền"
+where id = 1;
+
+alter table tbl_sinhvien
+add queQuan varchar(25);
