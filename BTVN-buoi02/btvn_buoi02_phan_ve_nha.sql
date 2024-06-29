@@ -30,3 +30,25 @@ where product_id = 1;
 update product
 set price = price * 1.1
 where product_id = 2;
+
+set SQL_SAFE_UPDATE = 0;
+update person
+set fullname = "John Doe" 
+where id = 10;
+
+update person
+set country = "Canada"
+where id = 3;
+
+update person
+set birthday = "1990-05-15",
+country = "Việt Nam"
+where id = 7 ;
+
+update person
+set salary = salary*1.4
+where id = 40;
+
+update person
+set salary = salary*0.85
+where salary > 6000;
